@@ -16,7 +16,7 @@
 Arduino_DataBus *bus = new Arduino_HWSPI(3 /* DC */, 5 /* CS */, 1 /* SCK */,  2/* MOSI */, GFX_NOT_DEFINED /* MISO */);
 
 /* More display class: https://github.com/moononournation/Arduino_GFX/wiki/Display-Class */
-Arduino_GFX *gfx = new Arduino_GC9107(bus, 4 /* RST */, 0 /* rotation */, true /* IPS */);
+Arduino_GFX *gfx = new Arduino_ST7735(bus, 4 /* RST */, 0 /* rotation */, true /* IPS */,128 /* width */, 128 /* height */,2 /* col offset 1 */, 3 /* row offset 1 */);
 
 
 #if defined(ESP32)
